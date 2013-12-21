@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: dave-faces-development
+  pool: 5
+  username: dev
+  password: root
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: dave-faces-production
+  pool: 5
+  username: dev
+  password: root
