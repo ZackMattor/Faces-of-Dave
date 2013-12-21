@@ -1,1 +1,48 @@
-Hello
+<div class="row">
+  <div class="col-md-12">
+    <div class="callout">
+      <a data-toggle="modal" data-target="#newFace" class="new"><img src="<%= asset_path "add.png" %>"></img></a> Faces of Dave
+    </div>
+  </div>
+</div> <!-- /ROW --> 
+<div class="row">
+  <div class="col-md-12 gallery">
+     <img src="http://placekitten.com/g/200/300"></img>
+     <img src="http://placekitten.com/g/200/300"></img>
+     <img src="http://placekitten.com/g/200/300"></img>
+     <img src="http://placekitten.com/g/200/300"></img>
+     <img src="http://placekitten.com/g/200/300"></img>
+     <img src="http://placekitten.com/g/200/300"></img>
+     <img src="http://placekitten.com/g/200/300"></img>
+     <img src="http://placekitten.com/g/200/300"></img>
+     <img src="http://placekitten.com/g/200/300"></img>
+     <img src="http://placekitten.com/g/200/300"></img>
+     <img src="http://placekitten.com/g/200/300"></img>
+     <img src="http://placekitten.com/g/200/300"></img>
+     <img src="http://placekitten.com/g/200/300"></img>
+     <img src="http://placekitten.com/g/200/300"></img>
+  </div>
+</div> <!-- /ROW --> 
+
+<!-- Modal -->
+<div class="modal fade" id="newFace" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <%= simple_form_for @newFace do |f| %>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">New Face</h4>
+        </div>
+        <div class="modal-body">
+            <%= f.input :name, label: false, :placeholder => "Name"%>
+            <%= f.input :description, label: false, :placeholder => "Description"%>
+            <%= f.input :image, label: false, :placeholder => "Name"%>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <%= f.button :submit, class: 'btn btn-primary' %>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  <% end %>
+</div><!-- /.modal -->

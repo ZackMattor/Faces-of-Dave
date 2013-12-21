@@ -1,6 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   background: #e6feff;
+  color: #444;
 }
 
 #header {
@@ -12,10 +13,10 @@ body {
 }
 
 .callout {
-  margin-top: 30px;
+  margin-top: 10px;
   font-size: 7.5em;
   text-align: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #666;
 }
 
 .content {
@@ -26,9 +27,36 @@ body {
   display: inline-block;
 
   img {
-    border: 1px solid black;
+    border: 1px solid #ddd;
     margin: 29px;
     padding: 11px;
     background-color: whitesmoke;
+  }
+}
+
+.new img {
+  height: 82px;
+  padding-bottom: 14px;
+}
+
+.modal-title {
+  font-size: 3em;
+}
+
+.modal-body {
+  input, textarea {
+    border: 1px solid #ccc;
+    padding: 6px;
+    width: 99%;
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  input.file {
+    border: none;
+  }
+
+  textarea {
+    height: 100px;
   }
 }

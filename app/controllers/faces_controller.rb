@@ -7,6 +7,13 @@ class FacesController < ApplicationController
   end
 
   def create
+    @face = Face.new params[:face]
+
+    if @face.save
+      redirect_to '/'
+    else
+      redirect_to '/', notice: "you did it wrong"
+    end
   end
 
   def destroy
