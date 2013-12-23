@@ -7,20 +7,9 @@
 </div> <!-- /ROW --> 
 <div class="row">
   <div class="col-md-12 gallery">
-     <img src="http://placekitten.com/g/200/300"></img>
-     <img src="http://placekitten.com/g/200/300"></img>
-     <img src="http://placekitten.com/g/200/300"></img>
-     <img src="http://placekitten.com/g/200/300"></img>
-     <img src="http://placekitten.com/g/200/300"></img>
-     <img src="http://placekitten.com/g/200/300"></img>
-     <img src="http://placekitten.com/g/200/300"></img>
-     <img src="http://placekitten.com/g/200/300"></img>
-     <img src="http://placekitten.com/g/200/300"></img>
-     <img src="http://placekitten.com/g/200/300"></img>
-     <img src="http://placekitten.com/g/200/300"></img>
-     <img src="http://placekitten.com/g/200/300"></img>
-     <img src="http://placekitten.com/g/200/300"></img>
-     <img src="http://placekitten.com/g/200/300"></img>
+    <% @faces.each  do |face|%>
+      <div class="image-wrap"><%= image_tag face.image.thumb %></div>
+    <% end %>
   </div>
 </div> <!-- /ROW --> 
 

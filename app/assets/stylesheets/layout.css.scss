@@ -26,9 +26,13 @@ body {
 .gallery {
   display: inline-block;
 
-  img {
+  .image-wrap {
+    display: inline-block;
+    min-width: 224px;
     border: 1px solid #ddd;
-    margin: 29px;
+    min-height: 324px;
+    overflow: hidden;
+    margin: 15px;
     padding: 11px;
     background-color: whitesmoke;
   }
