@@ -81,3 +81,20 @@ body {
     height: 100px;
   }
 }
+
+.calibration-zone {
+  position: relative;
+  background-image: image-url('calibration_image.jpg');
+  background-size: cover;
+
+  height: 500px;
+  width: 100%;
+}
+
+.face {
+  position: absolute;
+}
+
+.modal-content {
+  width: 575px !important;
+}
