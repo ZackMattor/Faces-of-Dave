@@ -11,14 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131221064419) do
+ActiveRecord::Schema.define(:version => 20131224054433) do
 
   create_table "faces", :force => true do |t|
     t.string   "name"
     t.text     "description"
     t.string   "image"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.integer  "translate_x", :default => 0,   :null => false
+    t.integer  "translate_y", :default => 0,   :null => false
+    t.float    "scale",       :default => 1.0, :null => false
+    t.integer  "rotation",    :default => 0,   :null => false
   end
 
 end

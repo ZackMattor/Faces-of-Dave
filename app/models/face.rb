@@ -1,5 +1,5 @@
 class Face < ActiveRecord::Base
-  attr_accessible :description, :image, :name
+  attr_accessible :description, :image, :name, :translate_x, :translate_y, :scale, :rotation
 
   mount_uploader :image, FaceUploader
 

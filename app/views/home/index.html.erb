@@ -8,7 +8,7 @@
 <div class="row">
   <div class="col-md-12 gallery">
     <% @faces.each  do |face|%>
-      <div class="image-wrap"><%= image_tag face.image.thumb %></div>
+      <div class="image-wrap"><div class="calibrate" data-id="<%= face.id %>"></div><%= image_tag face.image.thumb %></div>
     <% end %>
   </div>
 </div> <!-- /ROW --> 
@@ -34,4 +34,22 @@
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   <% end %>
+</div><!-- /.modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="calibrateFace" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Calibrate Face</h4>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->

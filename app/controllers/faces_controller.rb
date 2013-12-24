@@ -1,9 +1,18 @@
 class FacesController < ApplicationController
   def index
     @faces = Face.all
+
+    respond_to do |format|
+      format.json { render json: @faces }
+    end
   end
 
-  def new
+  def show
+    @face = Face.find params[:id]
+
+    respond_to do |format|
+      format.json { render json: @face }
+    end
   end
 
   def create
@@ -14,8 +23,5 @@ class FacesController < ApplicationController
     else
       redirect_to '/', notice: "you did it wrong"
     end
-  end
-
-  def destroy
   end
 end
