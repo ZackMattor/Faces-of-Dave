@@ -84,7 +84,7 @@ body {
 
 .calibration-zone {
   position: relative;
-  background-image: image-url('calibration_image.jpg');
+  background-image: image-url('calibration_image.png');
   background-size: cover;
 
   height: 500px;
@@ -93,6 +93,11 @@ body {
 
 .face {
   position: absolute;
+
+  img {
+    @include transform(scale(1.4));
+    opacity: 0.9;
+  }
 }
 
 .modal-content {
