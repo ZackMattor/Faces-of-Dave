@@ -44,7 +44,6 @@
   offset_x = width/2
   offset_y = height/2
 
-  console.log @scale
   transformString = 'scale(' + @scale + ') rotate(' + @rotation + 'deg)'
 
 
@@ -68,6 +67,9 @@
 
 @Face.prototype.getRotation = ->
   @rotation
+
+@Face.prototype.id = ->
+  @id
 
 ####
 # SETTERS

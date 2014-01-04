@@ -24,4 +24,14 @@ class FacesController < ApplicationController
       redirect_to '/', notice: "you did it wrong"
     end
   end
+
+  def calibrate
+    @face = Face.find params[:id]
+
+    if @face.update_attributes params[:face]
+      render status: 202, nothing: true
+    else
+      render status: 500, nothing: true
+    end
+  end
 end
