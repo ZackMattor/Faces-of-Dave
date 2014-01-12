@@ -34,4 +34,10 @@ class FacesController < ApplicationController
       render status: 500, nothing: true
     end
   end
+
+  def destroy
+    @face = Face.find params[:id]
+    @face.active = false
+    @face.save
+  end
 end
