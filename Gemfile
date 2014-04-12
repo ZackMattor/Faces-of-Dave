@@ -26,3 +26,5 @@ gem 'jquery-rails', '~> 2.3.0'
 gem "carrierwave"
 gem "bourbon"
 gem "rmagick"
+gem "figaro"
+gem "fog"
