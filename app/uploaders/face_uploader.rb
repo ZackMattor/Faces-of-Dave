@@ -11,6 +11,10 @@ class FaceUploader < CarrierWave::Uploader::Base
   storage :fog
   # storage :fog
 
+  def fog_use_ssl_for_aws
+    false
+  end
+
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
